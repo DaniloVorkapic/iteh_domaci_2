@@ -14,7 +14,12 @@ class PolaznikFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'ime' => $this->faker->firstName(),
+            'prezime' => $this->faker->lastName(),
+            'jmbg' => $this->faker->numerify("##############"),
+            'brojTelefona' => $this->faker->numerify("+381 ## ####/##-###"),
+            'email' => $this->faker->unique()->safeEmail(),
+         
         ];
     }
 }

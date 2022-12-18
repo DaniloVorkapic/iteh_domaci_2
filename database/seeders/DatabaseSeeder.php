@@ -2,6 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kupovina;
+use App\Models\Kurs;
+use App\Models\Polaznik;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +17,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+
+        User::truncate();
+        Kupovina::truncate();
+        Polaznik::truncate();
+        Kurs::truncate();
+
+
+        User::factory(10)->create();
+        Polaznik::factory(10)->create();
+
+        (new KursSeeder())->run();
+
+        Kupovina::factory(10)->create();
+
     }
 }

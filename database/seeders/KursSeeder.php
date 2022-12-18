@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kurs;
 use Illuminate\Database\Seeder;
 
 class KursSeeder extends Seeder
@@ -13,6 +14,57 @@ class KursSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $k1= new Kurs();
+        $k1->jezik="Engleski";
+        $k1->nivo="A1";
+        $k1->cena=15000;
+        $k1->save();
+
+        $k1= new Kurs();
+        $k1->jezik="Engleski";
+        $k1->nivo="A2";
+        $k1->cena=15000;
+        $k1->save();
+
+        $k1= new Kurs();
+        $k1->jezik="Engleski";
+        $k1->nivo="B1";
+        $k1->cena=16000;
+        $k1->save();
+
+        $k1= new Kurs();
+        $k1->jezik="Engleski";
+        $k1->nivo="B2";
+        $k1->cena=17000;
+        $k1->save();
+
+
+        $k1= new Kurs();
+        $k1->jezik="Nemacki";
+        $k1->nivo="A1";
+        $k1->cena=15000;
+        $k1->save();
+
+        $k1= new Kurs();
+        $k1->jezik="Nemacki";
+        $k1->nivo="A2";
+        $k1->cena=15000;
+        $k1->save();
+
+        $k1= new Kurs();
+        $k1->jezik="Nemacki";
+        $k1->nivo="B1";
+        $k1->cena=16000;
+        $k1->save();
+
+        $k1= new Kurs();
+        $k1->jezik="Nemacki";
+        $k1->nivo="B2";
+        $k1->cena=17000;
+        $k1->save();
+
+
+
+
     }
 }
