@@ -13,7 +13,8 @@ class Polaznik extends Model
         'ime',
         'prezime',
         'jmbg',
-        'brojTelefona'
+        'brojTelefona',
+        'email'
     ];
 
 

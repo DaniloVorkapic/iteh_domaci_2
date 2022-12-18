@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\KupovinaController;
+use App\Http\Controllers\KursController;
+use App\Http\Controllers\PolazinkController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +16,18 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/kupovine',[KupovinaController::class,'index']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/kursevi',[KursController::class,'index']);
+
+
+Route::get('/polaznici',[PolazinkController::class,'index']);
+Route::get('/polaznici/{id}',[PolazinkController::class,'show']);
+
+Route::delete('/polaznici/{id}',[PolazinkController::class,'destroy']);
+Route::post('/polaznici',[PolazinkController::class,'store']);
+
+Route::put('/polaznici/{id}',[PolazinkController::class,'update']);
+
+
+
