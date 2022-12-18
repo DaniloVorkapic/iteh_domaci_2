@@ -16,5 +16,8 @@ class Kurs extends Model
         'cena',
          
     ];
-
+    public function kupovina()
+    {
+        return $this->hasMany(Kupovina::class);
+    }
 }

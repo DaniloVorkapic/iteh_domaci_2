@@ -15,6 +15,11 @@ class CreateKupovinasTable extends Migration
     {
         Schema::create('kupovinas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('polaznik_id');
+            $table->foreignId('kurs_id');
+            $table->string('datum'); //gggg-mm-dd
+
+            
             $table->timestamps();
         });
     }

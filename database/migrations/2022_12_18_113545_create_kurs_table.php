@@ -15,6 +15,10 @@ class CreateKursTable extends Migration
     {
         Schema::create('kurs', function (Blueprint $table) {
             $table->id();
+            $table->string('jezik');
+            $table->string('nivo');
+            $table->double('cena');
+
             $table->timestamps();
         });
     }

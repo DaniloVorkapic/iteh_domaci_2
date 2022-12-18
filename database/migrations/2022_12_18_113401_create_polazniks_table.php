@@ -15,6 +15,12 @@ class CreatePolazniksTable extends Migration
     {
         Schema::create('polazniks', function (Blueprint $table) {
             $table->id();
+            $table->string('ime'); 
+             $table->string('prezime');
+             $table->string('jmbg');
+
+             $table->string('brojTelefona');
+
             $table->timestamps();
         });
     }
